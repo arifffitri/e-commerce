@@ -24,10 +24,10 @@ export default function SearchBox() {
     //   </Button>
     // </Form>
     <Container className="search-cont">
-      <Form action="" className="search" id="search-bar" onSubmit={submitHandler}>
+      <Form className="search" id="search-bar" onSubmit={submitHandler}>
         <InputGroup>
           {/* <FormControl type="text" name="q" id="q" onChange={(e) => setQuery(e.target.value)} placeholder="search products..." aria-label="Search Products" aria-describedby="button-search"></FormControl> */}
-          <FormControl type="search" placeholder="search products..." className="search__input" onChange={(e) => setQuery(e.target.value)} aria-label="Search Products" aria-describedby="button-search"></FormControl>
+          <FormControl type="search" name="q" placeholder="search products..." className="search__input" onChange={(e) => setQuery(e.target.value)} aria-label="Search Products" aria-describedby="button-search"></FormControl>
         </InputGroup>
         <Button variant="light" type="submit" className="search__button" id="search__button">
           <i className="fas fa-search search__icon"></i>
