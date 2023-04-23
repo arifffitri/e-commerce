@@ -1,5 +1,6 @@
 /* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
   /* HERO SECTION */
@@ -16,6 +17,20 @@
   --font-weight-semi-bold: 600;
   --font-weight-medium: 500;
   --font-weight-regular: 400;
+
+  /* ANIMATED SEARCH BAR */
+  /* Colors */
+  --first-color: hsl(222, 80%, 58%);
+  --dark-color: hsl(222, 24%, 8%);
+  --title-color: Ohsl(222, 8%, 8%);
+  --text-color-light: hsl(222, 8%, 65%);
+  --white-color: #fff;
+  --body-color: ■hsl(222, 100%, 99%);
+
+  /* Font and typography */
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --small-font-size: 0.813rem;
 }
 
 body {
@@ -117,6 +132,76 @@ main {
   .cta {
     margin-bottom: 50px;
   }
+}
+
+/* SEARCH BAR */
+@media screen and (min-width: 968px) {
+  :root {
+    --small-font-size: 0.875rem;
+  }
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #f8f9fa;
+}
+
+.search__input {
+  border: none;
+  outline: none;
+  width: calc(100% - 64px);
+  height: 100%;
+  border-radius: 4rem;
+  padding-left: 14px;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+}
+
+.search-cont {
+  position: relative;
+  width: 50%;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 24px hsla(222, 68%, 12%, 0.1);
+  border-radius: 4rem;
+}
+
+.search {
+  width: 97%;
+  height: 50px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.search__input:-webkit-autofill {
+  box-shadow: 0 0 0 100px var(--white-color) inset;
+}
+
+.search__button {
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.search__icon {
+  color: var(--white-color);
+  font-size: 1rem;
+  position: absolute;
 }
 
 /* SIDEBAR */

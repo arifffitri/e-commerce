@@ -82,11 +82,10 @@ function App() {
         <header>
           <Navbar bg="light" variant="light" expand="lg">
             <Container>
-              {/* <Button variant="dark" onClick={() => setSidebarIsOpen(!sidebarIsOpen)}>
-                <i className="fas fa-bars"></i>
-              </Button> */}
               <div className="position-nav">
-                <SearchBox />
+                <Button variant="dark" onClick={() => setSidebarIsOpen(!sidebarIsOpen)}>
+                  <i className="fas fa-bars"></i>
+                </Button>
               </div>
               <LinkContainer to="/">
                 <Navbar.Brand>ZORO</Navbar.Brand>
@@ -145,6 +144,9 @@ function App() {
               </Navbar.Collapse>
             </Container>
           </Navbar>
+          <div className="mb-3">
+            <SearchBox />
+          </div>
         </header>
         {/* End of Navbar Section */}
 
