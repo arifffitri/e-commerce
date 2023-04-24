@@ -33,6 +33,7 @@ import ProductEditScreen from "./screens/ProductEditScreen";
 import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
+import FooterSection from "./screens/FooterSection";
 // import ForgetPasswordScreen from "./screens/ForgetPasswordScreen";
 // import ResetPasswordScreen from "./screens/ResetPasswordScreen";
 
@@ -258,7 +259,7 @@ function App() {
           </Container>
         </main>
         <footer>
-          <div className="text-center">All rights reserved</div>
+          <FooterSection />
         </footer>
       </div>
     </BrowserRouter>

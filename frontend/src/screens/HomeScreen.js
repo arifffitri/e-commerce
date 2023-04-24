@@ -11,7 +11,6 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Image from "react-bootstrap/Image";
 import Fade from "react-reveal/Fade";
-
 import { Link } from "react-router-dom";
 
 // import data from "../data";
