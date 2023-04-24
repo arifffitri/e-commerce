@@ -109,10 +109,10 @@ function App() {
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                       <LinkContainer to="/profile">
-                        <NavDropdown.Item className="nav_dropdown-items">User Profile</NavDropdown.Item>
+                        <NavDropdown.Item>User Profile</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item className="nav_dropdown-items">Order History</NavDropdown.Item>
+                        <NavDropdown.Item>Order History</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
                       <Link className="dropdown-item" to="#signout" onClick={signoutHandler}>
@@ -129,16 +129,16 @@ function App() {
                   {userInfo && userInfo.isAdmin && (
                     <NavDropdown title="Admin" id="admin-nav-dropdown">
                       <LinkContainer to="/admin/dashboard">
-                        <NavDropdown.Item className="nav_dropdown-items">Dashboard</NavDropdown.Item>
+                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/products">
-                        <NavDropdown.Item className="nav_dropdown-items">Products</NavDropdown.Item>
+                        <NavDropdown.Item>Products</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/orders">
-                        <NavDropdown.Item className="nav_dropdown-items">Orders</NavDropdown.Item>
+                        <NavDropdown.Item>Orders</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/users">
-                        <NavDropdown.Item className="nav_dropdown-items">Users</NavDropdown.Item>
+                        <NavDropdown.Item>Users</NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
                   )}
