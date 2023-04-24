@@ -8,6 +8,8 @@ import { useContext, useEffect, useState } from "react";
 import { Store } from "../Store";
 import { toast } from "react-toastify";
 import { getError } from "../utils";
+import Row from "react-bootstrap/esm/Row";
+import Col from "react-bootstrap/esm/Col";
 
 export default function SigninScreen() {
   const navigate = useNavigate();
@@ -54,26 +56,34 @@ export default function SigninScreen() {
       <Helmet>
         <title>Sign In</title>
       </Helmet>
-      <h1 className="my-3">Sign In</h1>
-      <Form onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" required onChange={(e) => setEmail(e.target.value)} />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" required onChange={(e) => setPassword(e.target.value)} />
-        </Form.Group>
-      </Form>
-      <div className="mb-3">
-        <Button type="submit" onClick={submitHandler}>
-          Sign In
-        </Button>
-      </div>
-      <div className="mb-3">
-        New customer?{"  "}
-        <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
-      </div>
+      <Row>
+        <Col md={6}>
+          <h1 className="mb-5">LOG IN TO YOUR ACCOUNT</h1>
+          <Form onSubmit={submitHandler}>
+            <Form.Group className="mb-3" controlId="email">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control type="email" required onChange={(e) => setEmail(e.target.value)} />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="password">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" required onChange={(e) => setPassword(e.target.value)} />
+            </Form.Group>
+          </Form>
+          <div className="mb-3 mt-5 d-grid">
+            <Button type="submit" onClick={submitHandler}>
+              LOG IN
+            </Button>
+          </div>
+        </Col>
+        <Col md={1}></Col>
+        <Col md={5}>
+          <h1 className="mb-5">NEED AN ACCOUNT?</h1>
+          <Link className="mb-3 mt-5 d-grid" to={`/signup?redirect=${redirect}`}>
+            <Button variant="outline-dark">REGISTER</Button>
+          </Link>
+        </Col>
+      </Row>
+
       {/* <div className="mb-3">
         Forget Password? <Link to={`/forget-password`}>Reset Password</Link>
       </div> */}

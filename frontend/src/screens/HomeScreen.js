@@ -70,7 +70,7 @@ function HomeScreen() {
             <Row>
               <Col md={6} className="copy">
                 <div>
-                  <div className="text-hero-bold">Collections</div>
+                  <div className="text-hero-bold">COLLECTIONS</div>
                   <div className="text-hero-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan euismod lacus, et ultrices risus sagittis ac.</div>
                   <div className="cta">
                     <Link to="/all-products" className="btn btn-primary">
