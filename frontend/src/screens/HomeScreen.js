@@ -61,7 +61,7 @@ function HomeScreen() {
     <Fade bottom distance="20%" duration={1500}>
       <div>
         <Helmet>
-          <title>E-Shopee</title>
+          <title>ZORO Malaysia</title>
         </Helmet>
 
         {/* Hero Section */}
@@ -73,9 +73,9 @@ function HomeScreen() {
                   <div className="text-hero-bold">Collections</div>
                   <div className="text-hero-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis accumsan euismod lacus, et ultrices risus sagittis ac.</div>
                   <div className="cta">
-                    <Link to="/" className="btn btn-primary">
+                    <Link to="/all-products" className="btn btn-primary">
                       <i class="fa-solid fa-bag-shopping icon-image"></i>
-                      Shop Now
+                      SHOP NOW
                     </Link>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ function HomeScreen() {
                 <Link to="/search?category=Shirts" className="text-dark">
                   <Card.Img src="../images/shirt.jpg" alt="Card image" className="category" />
                   <Card.ImgOverlay>
-                    <Card.Title>Shirts</Card.Title>
+                    <Card.Title>SHIRTS</Card.Title>
                   </Card.ImgOverlay>
                 </Link>
               </Card>
@@ -116,7 +116,7 @@ function HomeScreen() {
                 <Link to="/search?category=Pants" className="text-dark">
                   <Card.Img src="../images/pants.jpg" alt="Card image" className="category" />
                   <Card.ImgOverlay>
-                    <Card.Title>Pants</Card.Title>
+                    <Card.Title>PANTS</Card.Title>
                   </Card.ImgOverlay>
                 </Link>
               </Card>
@@ -126,7 +126,7 @@ function HomeScreen() {
                 <Link to="/search?category=Shoes" className="text-dark">
                   <Card.Img src="../images/Shoes.jpg" alt="Card image" className="category" />
                   <Card.ImgOverlay>
-                    <Card.Title>Shoes</Card.Title>
+                    <Card.Title>SHOES</Card.Title>
                   </Card.ImgOverlay>
                 </Link>
               </Card>
@@ -134,7 +134,7 @@ function HomeScreen() {
                 <Link to="/search?category=Socks" className="text-dark">
                   <Card.Img src="../images/Socks.jpg" alt="Card image" className="category" />
                   <Card.ImgOverlay>
-                    <Card.Title>Socks</Card.Title>
+                    <Card.Title>SOCKS</Card.Title>
                   </Card.ImgOverlay>
                 </Link>
               </Card>
@@ -143,24 +143,6 @@ function HomeScreen() {
         </div>
 
         {/* End of Categories Section */}
-
-        <h1>Featured products</h1>
-        <div className="products">
-          {/* create a loading text "Loading..." using IF ELSE shorthand statement */}
-          {loading ? (
-            <LoadingBox />
-          ) : error ? (
-            <MessageBox variant="danger">{error}</MessageBox>
-          ) : (
-            <Row>
-              {products.map((product) => (
-                <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
-                  <Product product={product}></Product>
-                </Col>
-              ))}
-            </Row>
-          )}
-        </div>
       </div>
     </Fade>
   );

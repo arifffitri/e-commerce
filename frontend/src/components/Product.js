@@ -27,25 +27,25 @@ function Product(props) {
     });
   };
   return (
-    <Card>
+    <Card border="light">
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />
       </Link>
-      <Card.Body>
+      <Card.Body className="product_name">
         <Link to={`/product/${product.slug}`}>
           <Card.Title>{product.name}</Card.Title>
+          <Card.Text>RM{product.price}</Card.Text>
         </Link>
         <Rating rating={product.rating} numReviews={product.numReviews} />
-        <Card.Text>
-          <strong>RM{product.price}</strong>
-        </Card.Text>
-        {product.countInStock === 0 ? (
+
+        {/* DISPLAY 'ADD TO CART' BUTTON */}
+        {/* {product.countInStock === 0 ? (
           <Button variant="light" disabled>
             Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>
-        )}
+          <Button onClick={() => addToCartHandler(product)}>ADD TO CART</Button>
+        )} */}
       </Card.Body>
     </Card>
   );

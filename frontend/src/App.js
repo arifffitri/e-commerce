@@ -34,6 +34,7 @@ import OrderListScreen from "./screens/OrderListScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import FooterSection from "./screens/FooterSection";
+import AllProductsScreen from "./screens/AllProductsScreen";
 // import ForgetPasswordScreen from "./screens/ForgetPasswordScreen";
 // import ResetPasswordScreen from "./screens/ResetPasswordScreen";
 
@@ -92,7 +93,7 @@ function App() {
                 <Navbar.Brand>ZORO</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Collapse id="basic-navbar-nav" className="nav_collapse">
                 <Nav className="me-auto w-100 justify-content-end">
                   <Link to="/cart" className="nav-link">
                     <i class="fa-solid fa-cart-shopping icon-image"></i>
@@ -108,10 +109,10 @@ function App() {
                   {userInfo ? (
                     <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
                       <LinkContainer to="/profile">
-                        <NavDropdown.Item>User Profile</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">User Profile</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/orderhistory">
-                        <NavDropdown.Item>Order History</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">Order History</NavDropdown.Item>
                       </LinkContainer>
                       <NavDropdown.Divider />
                       <Link className="dropdown-item" to="#signout" onClick={signoutHandler}>
@@ -128,16 +129,16 @@ function App() {
                   {userInfo && userInfo.isAdmin && (
                     <NavDropdown title="Admin" id="admin-nav-dropdown">
                       <LinkContainer to="/admin/dashboard">
-                        <NavDropdown.Item>Dashboard</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">Dashboard</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/products">
-                        <NavDropdown.Item>Products</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">Products</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/orders">
-                        <NavDropdown.Item>Orders</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">Orders</NavDropdown.Item>
                       </LinkContainer>
                       <LinkContainer to="/admin/users">
-                        <NavDropdown.Item>Users</NavDropdown.Item>
+                        <NavDropdown.Item className="nav_dropdown-items">Users</NavDropdown.Item>
                       </LinkContainer>
                     </NavDropdown>
                   )}
@@ -254,6 +255,7 @@ function App() {
                   </AdminRoute>
                 }
               ></Route>
+              <Route path="/all-products" element={<AllProductsScreen />} />
               <Route path="/" element={<HomeScreen />} />
             </Routes>
           </Container>

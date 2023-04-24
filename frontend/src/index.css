@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
 
 :root {
   /* HERO SECTION */
@@ -39,6 +40,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Mono", monospace;
 }
 
 .site-container {
@@ -51,7 +53,7 @@ main {
 
 .btn-primary,
 .btn-outline-primary {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-weight: 400;
   background-color: #212f38;
   color: #d5d7d7;
@@ -65,15 +67,49 @@ main {
   border-color: #f0c040;
 } */
 
+/* ALL PRODUCTS */
+
+.all-products h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.rating span {
-  color: #ffc000;
+.product_name {
+  font-family: "Roboto Mono", monospace;
 }
+
+.product_name a {
+  text-decoration: none;
+}
+
+.product_name div,
+.product_name p {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.product_name button {
+  font-size: 0.8rem;
+}
+
+.rating {
+  margin: 0.5rem 0;
+}
+
+/* .rating span {
+  color: #ffc000;
+} */
 
 .product {
   border: 1px #404040 solid;
@@ -88,6 +124,44 @@ main {
 .product-info {
   padding: 1rem;
 }
+
+/* END OF PRODUCT */
+
+/* PRODUCT SCREEN */
+
+.screen_product {
+  font-family: "Roboto Mono", monospace;
+}
+
+.screen_product img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.screen_product-info button {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.screen_product-info {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 700px) {
+  .screen_product-info {
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+/* END OF PRODUCT SCREEN */
 
 .img-large {
   max-width: 100%;
@@ -112,6 +186,11 @@ main {
 }
 
 /* NAVBAR */
+
+.navbar-collapse,
+.nav-item a {
+  font-size: 0.9rem;
+}
 
 .navbar-brand {
   font-weight: bold;
@@ -164,9 +243,9 @@ header {
   height: 100%;
   border-radius: 4rem;
   padding-left: 14px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: lighter;
 }
 
 .search-cont {
@@ -267,7 +346,7 @@ section.hero {
 
 .text-hero-bold {
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: var(--header-1);
   font-weight: 400;
   padding-top: 50px;
@@ -276,7 +355,7 @@ section.hero {
 
 .text-hero-regular {
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   font-weight: 400;
   line-height: 2;
@@ -292,8 +371,8 @@ section.hero {
 /* CATEGORY */
 
 .categories {
-  font-family: "Courier Prime", monospace;
-  font-weight: 600;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
   margin: 100px 0;
 }
 
