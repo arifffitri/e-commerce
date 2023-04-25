@@ -163,6 +163,48 @@ main {
 
 /* END OF PRODUCT SCREEN */
 
+/* SIGNIN SCREEN */
+
+.signin-small-container {
+  max-width: 70rem;
+  padding: 10rem 0;
+}
+
+.signin-small-container h1 {
+  font-size: 2rem;
+}
+
+.signin-small-container button {
+  height: 3rem;
+}
+
+.signin-small-container a {
+  text-decoration: none;
+}
+
+/* END OF SIGNIN SCREEN */
+
+/* SIGNUP SCREEN */
+
+.signup-small-container {
+  max-width: 600px;
+  padding: 8rem 0;
+}
+
+.signup-small-container h1 {
+  font-size: 2rem;
+}
+
+.signup-small-container button {
+  height: 3rem;
+}
+
+.signup-small-container a {
+  text-decoration: none;
+}
+
+/* END OF SIGNUP SCREEN */
+
 .img-large {
   max-width: 100%;
 }
@@ -171,26 +213,9 @@ main {
   height: 80px;
 }
 
-/* SIGNIN SCREEN */
-
 .small-container {
-  max-width: 70rem;
-  padding: 10rem 0;
+  max-width: 600px;
 }
-
-.small-container h1 {
-  font-size: 2rem;
-}
-
-.small-container button {
-  height: 3rem;
-}
-
-.small-container a {
-  text-decoration: none;
-}
-
-/* END OF SIGNIN SCREEN */
 
 .checkout-steps > div {
   border-bottom: 0.2rem solid #a0a0a0;

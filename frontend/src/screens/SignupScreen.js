@@ -57,11 +57,11 @@ export default function SignupScreen() {
   }, [navigate, redirect, userInfo]);
 
   return (
-    <Container className="small-container">
+    <Container className="signup-small-container">
       <Helmet>
-        <title>Sign Up</title>
+        <title>REGISTRATION | ZORO Malaysia</title>
       </Helmet>
-      <h1 className="my-3">Sign Up</h1>
+      <h1 className="mb-5">REGISTRATION</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className="mb-3" controlId="name">
           <Form.Label>Name</Form.Label>
@@ -80,14 +80,14 @@ export default function SignupScreen() {
           <Form.Control type="password" required onChange={(e) => setConfirmPassword(e.target.value)} />
         </Form.Group>
       </Form>
-      <div className="mb-3">
-        <Button type="submit" onClick={submitHandler}>
-          Sign Up
+      <div className="mb-3 mt-5 d-grid">
+        <Button type="submit" variant="outline-dark" onClick={submitHandler}>
+          CREATE ACCOUNT
         </Button>
       </div>
       <div className="mb-3">
         Already have an account?{"  "}
-        <Link to={`/signin?redirect=${redirect}`}>Sign-In</Link>
+        <Link to={`/signin?redirect=${redirect}`}>Log-In</Link>
       </div>
     </Container>
   );
