@@ -1,5 +1,8 @@
 /* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap");
 
 :root {
   /* HERO SECTION */
@@ -201,7 +204,7 @@ main {
 
 .signup-small-container {
   max-width: 600px;
-  padding: 10rem 0;
+  padding: 8rem 0;
 }
 
 .signup-small-container h1 {
@@ -217,19 +220,6 @@ main {
 }
 
 /* END OF SIGNUP SCREEN */
-
-/* PROFILE SCREEN */
-
-.profile-small-container {
-  max-width: 600px;
-  padding: 8rem 0;
-}
-
-/* END OF PROFILE SCREEN */
-
-/* ORDER HISTORY SCREEN */
-
-/* END OF ORDER HISTORY SCREEN */
 
 .img-large {
   max-width: 100%;
